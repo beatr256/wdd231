@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="WDD 231 Course Home Page">
+  <meta name="author" content="Lena">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WDD 231 | Home</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+<header>
+  <img src="images/logo.svg" alt="Site logo">
+  <span>Lena</span>
+  <button id="menu" aria-label="Menu">&#9776;</button>
+</header>
+
+<nav id="nav">
+  <a href="index.html" class="active">Home</a>
+  <a href="chamber/">Chamber</a>
+  <a href="final/">Final</a>
+</nav>
+
+<main>
+  <h1>Home</h1>
+
+  <section>
+    <h2>About Me</h2>
+    <p>My name is Hellen Beatrice Apolot, and I am a student at Byu pathway i love reading .</p>
+  </section>
+
+  <section>
+    <h2>Web & Computer Programming Certificate</h2>
+
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="wdd">WDD</button>
+      <button data-filter="cse">CSE</button>
+    </div>
+
+    <div id="courses"></div>
+    <p>Total Credits: <span id="credits"></span></p>
+  </section>
+
+  <section>
+    <h2>Resources</h2>
+    <p>Helpful links.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/yourusername">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+  </div>
+
+  <p>
+    &copy; <span id="2026"></span> Hellen Beatrice Apolot | Uganda
+  </p>
+
+  <p id="lastModified"></p>
+</footer>
+</body>
+</html>
