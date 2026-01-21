@@ -1,0 +1,20 @@
+{
+  "members": [
+    {
+      "name": "Riverstone Coffee",
+      "address": "42 Main St, Riverton",
+      "phone": "(555) 123-4567",
+      "website": "https://riverstone.com",
+      "image": "coffee-logo.webp",
+      "level": 3
+    },
+    {
+      "name": "Highpoint Tech",
+      "address": "100 Innovation Dr",
+      "phone": "(555) 987-6543",
+      "website": "https://highpoint.io",
+      "image": "tech-logo.webp",
+      "level": 2
+    }
+  ]
+}
