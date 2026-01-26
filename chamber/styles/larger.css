@@ -8,3 +8,22 @@
         justify-content: space-around;
     }
 }
+
+main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    .spotlights {
+        grid-column: 1 / -1;
+    }
+
+    #spotlight-container {
+        flex-direction: row;
+    }
+

@@ -41,3 +41,47 @@ a:focus {
     outline: 2px solid #ffffff;
     outline-offset: 2px;
 }
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cta {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.events,
+.weather,
+.spotlights {
+    padding: 1rem;
+}
+
+#spotlight-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#spotlight-container section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+#spotlight-container img {
+    max-width: 100%;
+    height: auto;
+}
