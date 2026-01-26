@@ -1,29 +1,35 @@
 @media (min-width: 800px) {
-    #members-container.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
+    /* Navigation for desktop */
     nav ul {
         display: flex;
         justify-content: space-around;
     }
-}
 
-main {
+    /* Members container for grid layout */
+    #members-container.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Home page layout */
+    main {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 1rem;
     }
 
+    /* Hero section spans full width */
     .hero {
         grid-column: 1 / -1;
     }
 
+    /* Spotlights section spans full width */
     .spotlights {
         grid-column: 1 / -1;
     }
 
+    /* Spotlights container in row for desktop */
     #spotlight-container {
         flex-direction: row;
     }
-
+}
