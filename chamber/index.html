@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US"></html>
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,14 +28,13 @@
     <script defer src="scripts/weather.js"></script>
     <script defer src="scripts/spotlights.js"></script>
 </head>
-
 <body>
 <header>
     <button id="menu" aria-label="Toggle Menu">☰</button>
     <nav>
         <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
@@ -51,7 +50,7 @@
         <a class="cta" href="join.html">Join the Chamber</a>
     </section>
 
-    <!-- Events -->
+    <!-- Events Section -->
     <section class="events">
         <h2>Current Events</h2>
         <ul>
@@ -60,20 +59,19 @@
         </ul>
     </section>
 
-    <!-- Weather -->
+    <!-- Weather Section -->
     <section class="weather">
         <h2>Weather</h2>
         <p><span id="temp"></span>°C — <span id="desc"></span></p>
         <div id="forecast"></div>
     </section>
 
-    <!-- Spotlights -->
+    <!-- Spotlights Section -->
     <section class="spotlights">
         <h2>Member Spotlights</h2>
         <div id="spotlight-container"></div>
     </section>
 </main>
-
 
 <footer>
     <p>© <span id="currentyear"></span> Jinja Chamber of Commerce</p>
