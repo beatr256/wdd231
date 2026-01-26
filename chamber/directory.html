@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Directory | Jinja Chamber of Commerce</title>
-    
+
     <meta name="description" content="Explore the official business directory of Jinja City. Find and connect with local organizations and gold-level members.">
     <meta name="author" content="Hellen Beatrice Apolot">
-    
+
     <link rel="icon" href="images/favicon.ico">
 
     <meta property="og:title" content="Jinja City Chamber of Commerce Business Directory">
@@ -27,17 +27,34 @@
     <script defer src="scripts/main.js"></script>
     <script defer src="scripts/directory.js"></script>
 </head>
+
 <body>
-    <header>
-        <button id="menu" aria-label="Toggle Menu">☰</button>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
-            </ul>
-        </nav>
-    </header>
-    </body>
+<header>
+    <button id="menu" aria-label="Toggle Menu">☰</button>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html" class="active">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Business Directory</h1>
+
+    <div class="view-buttons">
+        <button id="grid">Grid</button>
+        <button id="list">List</button>
+    </div>
+
+    <section id="members-container" class="grid"></section>
+</main>
+
+<footer>
+    <p>© <span id="currentyear"></span> Jinja Chamber of Commerce</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+</body>
 </html>
