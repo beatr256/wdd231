@@ -1,98 +1,81 @@
-/* Mobile-first Styles */
-
-/* Navigation */
-.navigation {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
+/* Members Container */
+#members-container {
+    padding: 20px;
+    gap: 20px;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #003366;
-    color: #ffffff;
-}
-
-.navigation a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* Members container */
+/* Grid view (mobile = single column by default) */
 #members-container.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
-    padding: 20px;
 }
 
+/* List view */
 #members-container.list {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 10px;
 }
 
-/* Main content */
-main {
-    background-color: #ffffff;
-    color: #222222;
+/* Member Cards */
+.member {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
+/* Hide images in list view */
+#members-container.list .member img {
+    display: none;
 }
 
-.hero img {
+/* Member Images */
+.member img {
     width: 100%;
+    max-width: 150px;
     height: auto;
-    display: block;
+    margin-bottom: 10px;
 }
 
-.cta {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    background-color: #003366;
-    color: #ffffff;
-    padding: 0.75rem 1rem;
+/* Member Text */
+.member h3 {
+    margin: 0.5rem 0;
+}
+
+.member p,
+.member a {
+    margin: 0.25rem 0;
+}
+
+.member a {
+    color: #003366;
     text-decoration: none;
     font-weight: bold;
+}
+
+.member a:hover {
+    text-decoration: underline;
+}
+
+/* View Buttons */
+.view-buttons {
+    margin: 1rem 0;
+}
+
+.view-buttons button {
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
-/* Events, Weather, Spotlights Sections */
-.events,
-.weather,
-.spotlights {
-    padding: 1rem;
-}
-
-/* Spotlights container */
-#spotlight-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-#spotlight-container section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-}
-
-#spotlight-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Accessibility: focus outlines */
-button:focus,
-a:focus {
-    outline: 2px solid #ffffff;
-    outline-offset: 2px;
+.view-buttons button:hover {
+    background-color: #0055aa;
 }

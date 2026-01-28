@@ -1,20 +1,60 @@
 {
   "members": [
     {
-      "name": "Riverstone Coffee",
-      "address": "42 Main St, Riverton",
-      "phone": "(555) 123-4567",
-      "website": "https://riverstone.com",
-      "image": "coffee-logo.webp",
-      "level": 3
+      "name": "Alpha Tech",
+      "address": "123 Main St, Jinja",
+      "phone": "0788 123 456",
+      "website": "https://alphatech.com",
+      "level": 3,
+      "image": "https://via.placeholder.com/150?text=Alpha+Tech"
     },
     {
-      "name": "Highpoint Tech",
-      "address": "100 Innovation Dr",
-      "phone": "(555) 987-6543",
-      "website": "https://highpoint.io",
-      "image": "tech-logo.webp",
-      "level": 2
+      "name": "Beta Builders",
+      "address": "456 Side Rd, Jinja",
+      "phone": "0788 654 321",
+      "website": "https://betabuilders.com",
+      "level": 2,
+      "image": "https://via.placeholder.com/150?text=Beta+Builders"
+    },
+    {
+      "name": "Gamma Groceries",
+      "address": "789 Market St, Jinja",
+      "phone": "0788 789 123",
+      "website": "https://gammagroceries.com",
+      "level": 3,
+      "image": "https://via.placeholder.com/150?text=Gamma+Groceries"
+    },
+    {
+      "name": "Delta Designs",
+      "address": "101 Design Ave, Jinja",
+      "phone": "0788 321 987",
+      "website": "https://deltadesigns.com",
+      "level": 2,
+      "image": "https://via.placeholder.com/150?text=Delta+Designs"
+    },
+    {
+      "name": "Epsilon Electronics",
+      "address": "202 Tech Blvd, Jinja",
+      "phone": "0788 987 654",
+      "website": "https://epsilonelectronics.com",
+      "level": 3,
+      "image": "https://via.placeholder.com/150?text=Epsilon+Electronics"
+    },
+    {
+      "name": "Zeta Zoom",
+      "address": "303 Fast Ln, Jinja",
+      "phone": "0788 111 222",
+      "website": "https://zetazoom.com",
+      "level": 3,
+      "image": "https://via.placeholder.com/150?text=Zeta+Zoom"
+    },
+    {
+      "name": "Eta Enterprises",
+      "address": "404 Enterprise Dr, Jinja",
+      "phone": "0788 333 444",
+      "website": "https://etaenterprises.com",
+      "level": 2,
+      "image": "https://via.placeholder.com/150?text=Eta+Enterprises"
     }
   ]
 }
