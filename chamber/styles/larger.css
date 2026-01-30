@@ -11,3 +11,14 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 }
+
+/* =========================
+   JOIN PAGE – LARGE SCREENS
+========================= */
+
+@media (min-width: 800px) {
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
