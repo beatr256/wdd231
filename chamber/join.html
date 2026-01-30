@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Join the Jinja Chamber of Commerce">
+    <meta property="og:title" content="Join the Jinja Chamber of Commerce Today">
     <meta property="og:description" content="Become a member of the Jinja Chamber of Commerce and access business growth opportunities.">
-    <meta property="og:image" content="https://beapolot.github.io/wdd230/images/chamber-og.jpg">
-    <meta property="og:url" content="https://beapolot.github.io/wdd230/join.html">
+    <meta property="og:image" content="https://beatr256.github.io/chamber/images/chamber_og.jpg">
+    <meta property="og:url" content="https://beatr256.github.io/chamber/join.html">
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
@@ -25,7 +25,8 @@
 <body>
     <header>
         <nav>
-            </nav>
+            <!-- Add your navigation links here -->
+        </nav>
     </header>
 
     <main>
@@ -33,15 +34,33 @@
         <div class="join-layout">
             <form method="get" action="thankyou.html" class="join-form">
                 <h2>Membership Application</h2>
-                <label>First Name <input type="text" name="fname" required autocomplete="given-name"></label>
-                <label>Last Name <input type="text" name="lname" required autocomplete="family-name"></label>
-                <label>Organizational Title <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"></label>
-                <label>Email <input type="email" name="email" required autocomplete="email" placeholder="example@email.com"></label>
-                <label>Mobile Phone <input type="tel" name="phone" required autocomplete="tel"></label>
-                <label>Business / Organization Name <input type="text" name="business" required autocomplete="organization"></label>
-                
+
+                <label>First Name
+                    <input type="text" name="fname" title="First Name" required autocomplete="given-name">
+                </label>
+
+                <label>Last Name
+                    <input type="text" name="lname" title="Last Name" required autocomplete="family-name">
+                </label>
+
+                <label>Organizational Title
+                    <input type="text" name="orgtitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                </label>
+
+                <label>Email
+                    <input type="email" name="email" title="Email Address" required autocomplete="email" placeholder="example@email.com">
+                </label>
+
+                <label>Mobile Phone
+                    <input type="tel" name="phone" title="Mobile Phone" required autocomplete="tel">
+                </label>
+
+                <label>Business / Organization Name
+                    <input type="text" name="business" title="Business Name" required autocomplete="organization">
+                </label>
+
                 <label>Membership Level
-                    <select name="membership">
+                    <select name="membership" title="Membership Level">
                         <option value="np">NP Membership</option>
                         <option value="bronze">Bronze Membership</option>
                         <option value="silver">Silver Membership</option>
@@ -49,7 +68,10 @@
                     </select>
                 </label>
 
-                <label>Business Description <textarea name="description"></textarea></label>
+                <label>Business Description
+                    <textarea name="description" title="Business Description"></textarea>
+                </label>
+
                 <input type="hidden" id="timestamp" name="timestamp">
                 <button type="submit">Apply for Membership</button>
             </form>
@@ -79,6 +101,7 @@
         </div>
     </main>
 
+    <!-- Modals -->
     <dialog id="npModal">
         <h3>NP Membership Benefits</h3>
         <p>Free membership, networking events, basic exposure.</p>
