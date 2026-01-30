@@ -1,176 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Jinja Chamber of Commerce</title>
+    
+    <meta name="description" content="Apply to join the Jinja Chamber of Commerce and grow your business through networking, training, and promotion.">
+    <meta name="author" content="Hellen Beatrice Apolot">
+    <link rel="icon" href="images/favicon.ico">
 
-  <title>Join the Chamber | Jinja Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
 
-  <meta name="description"
-        content="Apply to join the Jinja Chamber of Commerce and grow your business through networking, training, and promotion.">
+    <meta property="og:title" content="Join the Jinja Chamber of Commerce">
+    <meta property="og:description" content="Become a member of the Jinja Chamber of Commerce and access business growth opportunities.">
+    <meta property="og:image" content="https://beapolot.github.io/wdd230/images/chamber-og.jpg">
+    <meta property="og:url" content="https://beapolot.github.io/wdd230/join.html">
 
-  <meta name="author" content="Hellen Beatrice Apolot">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Join the Jinja Chamber of Commerce">
-  <meta property="og:description"
-        content="Become a member of the Jinja Chamber of Commerce and access business growth opportunities.">
-  <meta property="og:image" content="https://your-github-pages-url/images/chamber-og.jpg">
-  <meta property="og:url" content="https://your-github-pages-url/join.html">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
-
-  <!-- JS -->
-  <script defer src="scripts/join.js"></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script defer src="scripts/join.js"></script>
 </head>
-
 <body>
+    <header>
+        <nav>
+            </nav>
+    </header>
 
-<header>
-  <nav>
-    <!-- shared navigation -->
-  </nav>
-</header>
+    <main>
+        <h1>Join the Jinja Chamber of Commerce</h1>
+        <div class="join-layout">
+            <form method="get" action="thankyou.html" class="join-form">
+                <h2>Membership Application</h2>
+                <label>First Name <input type="text" name="fname" required autocomplete="given-name"></label>
+                <label>Last Name <input type="text" name="lname" required autocomplete="family-name"></label>
+                <label>Organizational Title <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"></label>
+                <label>Email <input type="email" name="email" required autocomplete="email" placeholder="example@email.com"></label>
+                <label>Mobile Phone <input type="tel" name="phone" required autocomplete="tel"></label>
+                <label>Business / Organization Name <input type="text" name="business" required autocomplete="organization"></label>
+                
+                <label>Membership Level
+                    <select name="membership">
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
 
-<main>
-  <!-- REQUIRED h1 INSIDE MAIN -->
-  <h1>Join the Jinja Chamber of Commerce</h1>
+                <label>Business Description <textarea name="description"></textarea></label>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit">Apply for Membership</button>
+            </form>
 
-  <div class="join-layout">
+            <section class="membership-cards">
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <p>No cost for nonprofits</p>
+                    <button data-modal="npModal">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3>Bronze</h3>
+                    <p>Entry-level exposure</p>
+                    <button data-modal="bronzeModal">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3>Silver</h3>
+                    <p>Training & promotions</p>
+                    <button data-modal="silverModal">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3>Gold</h3>
+                    <p>Premium spotlight benefits</p>
+                    <button data-modal="goldModal">Learn More</button>
+                </div>
+            </section>
+        </div>
+    </main>
 
-    <!-- ================= FORM ================= -->
-    <form method="get" action="thankyou.html" class="join-form">
-      <h2>Membership Application</h2>
+    <dialog id="npModal">
+        <h3>NP Membership Benefits</h3>
+        <p>Free membership, networking events, basic exposure.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="bronzeModal">
+        <h3>Bronze Benefits</h3>
+        <p>Event discounts, directory listing.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="silverModal">
+        <h3>Silver Benefits</h3>
+        <p>Advertising, training sessions, homepage features.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
+    <dialog id="goldModal">
+        <h3>Gold Benefits</h3>
+        <p>Premium advertising, spotlight placement, VIP events.</p>
+        <button class="close-modal">Close</button>
+    </dialog>
 
-      <label>
-        First Name
-        <input type="text" name="fname" title="First Name"
-               required autocomplete="given-name">
-      </label>
-
-      <label>
-        Last Name
-        <input type="text" name="lname" title="Last Name"
-               required autocomplete="family-name">
-      </label>
-
-      <label>
-        Organizational Title
-        <input type="text" name="orgtitle" title="Organizational Title"
-               autocomplete="organization-title"
-               pattern="[A-Za-z\s\-]{7,}">
-      </label>
-
-      <label>
-        Email
-        <input type="email" name="email" title="Email Address"
-               required autocomplete="email"
-               placeholder="example@email.com">
-      </label>
-
-      <label>
-        Mobile Phone
-        <input type="tel" name="phone" title="Mobile Phone"
-               required autocomplete="tel">
-      </label>
-
-      <label>
-        Business / Organization Name
-        <input type="text" name="business" title="Business Name"
-               required autocomplete="organization">
-      </label>
-
-      <label>
-        Membership Level
-        <select name="membership" title="Membership Level">
-          <option value="np">NP Membership</option>
-          <option value="bronze">Bronze Membership</option>
-          <option value="silver">Silver Membership</option>
-          <option value="gold">Gold Membership</option>
-        </select>
-      </label>
-
-      <label>
-        Business Description
-        <textarea name="description" title="Business Description"></textarea>
-      </label>
-
-      <!-- hidden timestamp -->
-      <input type="hidden" id="timestamp" name="timestamp">
-
-      <!-- REQUIRED submit button -->
-      <button type="submit">Apply for Membership</button>
-    </form>
-
-    <!-- ================= MEMBERSHIP CARDS ================= -->
-    <section class="membership-cards">
-
-      <div class="card">
-        <h3>NP Membership</h3>
-        <p>No cost for nonprofits</p>
-        <button data-modal="npModal">Learn More</button>
-      </div>
-
-      <div class="card">
-        <h3>Bronze</h3>
-        <p>Entry-level exposure</p>
-        <button data-modal="bronzeModal">Learn More</button>
-      </div>
-
-      <div class="card">
-        <h3>Silver</h3>
-        <p>Training & promotions</p>
-        <button data-modal="silverModal">Learn More</button>
-      </div>
-
-      <div class="card">
-        <h3>Gold</h3>
-        <p>Premium spotlight benefits</p>
-        <button data-modal="goldModal">Learn More</button>
-      </div>
-
-    </section>
-  </div>
-</main>
-
-<!-- ================= MODALS (NO INLINE JS) ================= -->
-<dialog id="npModal">
-  <h3>NP Membership Benefits</h3>
-  <p>Free membership, networking events, basic exposure.</p>
-  <button class="close-modal">Close</button>
-</dialog>
-
-<dialog id="bronzeModal">
-  <h3>Bronze Benefits</h3>
-  <p>Event discounts, directory listing.</p>
-  <button class="close-modal">Close</button>
-</dialog>
-
-<dialog id="silverModal">
-  <h3>Silver Benefits</h3>
-  <p>Advertising, training sessions, homepage features.</p>
-  <button class="close-modal">Close</button>
-</dialog>
-
-<dialog id="goldModal">
-  <h3>Gold Benefits</h3>
-  <p>Premium advertising, spotlight placement, VIP events.</p>
-  <button class="close-modal">Close</button>
-</dialog>
-
-<footer>
-  <p>&copy; 2026 Jinja Chamber of Commerce</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Jinja Chamber of Commerce | Hellen Beatrice Apolot</p>
+    </footer>
 </body>
 </html>

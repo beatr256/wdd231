@@ -1,16 +1,24 @@
-// timestamp
-document.getElementById("timestamp").value = new Date().toISOString();
+document.addEventListener("DOMContentLoaded", () => {
+    // Set hidden timestamp
+    const timestampField = document.getElementById("timestamp");
+    if (timestampField) {
+        timestampField.value = new Date().toLocaleString();
+    }
 
-// open modals
-document.querySelectorAll("[data-modal]").forEach(button => {
-  button.addEventListener("click", () => {
-    document.getElementById(button.dataset.modal).showModal();
-  });
-});
+    // Modal Control Logic
+    const modalButtons = document.querySelectorAll("[data-modal]");
+    const closeButtons = document.querySelectorAll(".close-modal");
 
-// close modals (NO inline JS)
-document.querySelectorAll(".close-modal").forEach(button => {
-  button.addEventListener("click", () => {
-    button.closest("dialog").close();
-  });
+    modalButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            document.getElementById(modalId).showModal();
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.closest("dialog").close();
+        });
+    });
 });
