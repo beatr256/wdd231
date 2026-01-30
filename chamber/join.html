@@ -2,146 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Join the Chamber</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="styles/base.css">
+  <title>Join the Chamber | Jinja Chamber of Commerce</title>
+
+  <meta name="description"
+        content="Apply to join the Jinja Chamber of Commerce and grow your business through networking, training, and promotion.">
+
+  <meta name="author" content="Hellen Beatrice Apolot">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Join the Jinja Chamber of Commerce">
+  <meta property="og:description"
+        content="Become a member of the Jinja Chamber of Commerce and access business growth opportunities.">
+  <meta property="og:image" content="https://your-github-pages-url/images/chamber-og.jpg">
+  <meta property="og:url" content="https://your-github-pages-url/join.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
 
+  <!-- JS -->
   <script defer src="scripts/join.js"></script>
 </head>
+
 <body>
 
 <header>
-  <h1>Chamber of Commerce</h1>
+  <nav>
+    <!-- shared navigation -->
+  </nav>
 </header>
 
-<nav>
-  <!-- your shared navigation -->
-</nav>
+<main>
+  <!-- REQUIRED h1 INSIDE MAIN -->
+  <h1>Join the Jinja Chamber of Commerce</h1>
 
-<main class="join-layout">
+  <div class="join-layout">
 
-  <!-- ================= FORM ================= -->
-  <form method="get" action="thankyou.html" class="join-form">
-    <h2>Membership Application</h2>
+    <!-- ================= FORM ================= -->
+    <form method="get" action="thankyou.html" class="join-form">
+      <h2>Membership Application</h2>
 
-    <label>
-      First Name
-      <input type="text" name="fname" title="First Name"
-        required autocomplete="given-name">
-    </label>
+      <label>
+        First Name
+        <input type="text" name="fname" title="First Name"
+               required autocomplete="given-name">
+      </label>
 
-    <label>
-      Last Name
-      <input type="text" name="lname" title="Last Name"
-        required autocomplete="family-name">
-    </label>
+      <label>
+        Last Name
+        <input type="text" name="lname" title="Last Name"
+               required autocomplete="family-name">
+      </label>
 
-    <label>
-      Organizational Title
-      <input type="text" name="orgtitle" title="Organizational Title"
-        autocomplete="organization-title"
-        pattern="[A-Za-z\s\-]{7,}">
-    </label>
+      <label>
+        Organizational Title
+        <input type="text" name="orgtitle" title="Organizational Title"
+               autocomplete="organization-title"
+               pattern="[A-Za-z\s\-]{7,}">
+      </label>
 
-    <label>
-      Email
-      <input type="email" name="email" title="Email Address"
-        required autocomplete="email"
-        placeholder="example@email.com">
-    </label>
+      <label>
+        Email
+        <input type="email" name="email" title="Email Address"
+               required autocomplete="email"
+               placeholder="example@email.com">
+      </label>
 
-    <label>
-      Mobile Phone
-      <input type="tel" name="phone" title="Mobile Phone"
-        required autocomplete="tel">
-    </label>
+      <label>
+        Mobile Phone
+        <input type="tel" name="phone" title="Mobile Phone"
+               required autocomplete="tel">
+      </label>
 
-    <label>
-      Business / Organization Name
-      <input type="text" name="business" title="Business Name"
-        required autocomplete="organization">
-    </label>
+      <label>
+        Business / Organization Name
+        <input type="text" name="business" title="Business Name"
+               required autocomplete="organization">
+      </label>
 
-    <label>
-      Membership Level
-      <select name="membership" title="Membership Level">
-        <option value="np">NP Membership</option>
-        <option value="bronze">Bronze Membership</option>
-        <option value="silver">Silver Membership</option>
-        <option value="gold">Gold Membership</option>
-      </select>
-    </label>
+      <label>
+        Membership Level
+        <select name="membership" title="Membership Level">
+          <option value="np">NP Membership</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
 
-    <label>
-      Business Description
-      <textarea name="description" title="Business Description"></textarea>
-    </label>
+      <label>
+        Business Description
+        <textarea name="description" title="Business Description"></textarea>
+      </label>
 
-    <!-- hidden timestamp -->
-    <input type="hidden" id="timestamp" name="timestamp">
+      <!-- hidden timestamp -->
+      <input type="hidden" id="timestamp" name="timestamp">
 
-    <input type="submit" value="Apply for Membership">
-  </form>
+      <!-- REQUIRED submit button -->
+      <button type="submit">Apply for Membership</button>
+    </form>
 
-  <!-- ================= MEMBERSHIP CARDS ================= -->
-  <section class="membership-cards">
+    <!-- ================= MEMBERSHIP CARDS ================= -->
+    <section class="membership-cards">
 
-    <div class="card fade-in">
-      <h3>NP Membership</h3>
-      <p>No cost for nonprofits</p>
-      <button data-modal="npModal">Learn More</button>
-    </div>
+      <div class="card">
+        <h3>NP Membership</h3>
+        <p>No cost for nonprofits</p>
+        <button data-modal="npModal">Learn More</button>
+      </div>
 
-    <div class="card fade-in">
-      <h3>Bronze</h3>
-      <p>Entry-level exposure</p>
-      <button data-modal="bronzeModal">Learn More</button>
-    </div>
+      <div class="card">
+        <h3>Bronze</h3>
+        <p>Entry-level exposure</p>
+        <button data-modal="bronzeModal">Learn More</button>
+      </div>
 
-    <div class="card fade-in">
-      <h3>Silver</h3>
-      <p>Training & promotions</p>
-      <button data-modal="silverModal">Learn More</button>
-    </div>
+      <div class="card">
+        <h3>Silver</h3>
+        <p>Training & promotions</p>
+        <button data-modal="silverModal">Learn More</button>
+      </div>
 
-    <div class="card fade-in">
-      <h3>Gold</h3>
-      <p>Premium spotlight benefits</p>
-      <button data-modal="goldModal">Learn More</button>
-    </div>
+      <div class="card">
+        <h3>Gold</h3>
+        <p>Premium spotlight benefits</p>
+        <button data-modal="goldModal">Learn More</button>
+      </div>
 
-  </section>
+    </section>
+  </div>
 </main>
 
-<!-- ================= MODALS ================= -->
+<!-- ================= MODALS (NO INLINE JS) ================= -->
 <dialog id="npModal">
   <h3>NP Membership Benefits</h3>
   <p>Free membership, networking events, basic exposure.</p>
-  <button onclick="this.parentElement.close()">Close</button>
+  <button class="close-modal">Close</button>
 </dialog>
 
 <dialog id="bronzeModal">
   <h3>Bronze Benefits</h3>
   <p>Event discounts, directory listing.</p>
-  <button onclick="this.parentElement.close()">Close</button>
+  <button class="close-modal">Close</button>
 </dialog>
 
 <dialog id="silverModal">
   <h3>Silver Benefits</h3>
   <p>Advertising, training sessions, homepage features.</p>
-  <button onclick="this.parentElement.close()">Close</button>
+  <button class="close-modal">Close</button>
 </dialog>
 
 <dialog id="goldModal">
   <h3>Gold Benefits</h3>
   <p>Premium advertising, spotlight placement, VIP events.</p>
-  <button onclick="this.parentElement.close()">Close</button>
+  <button class="close-modal">Close</button>
 </dialog>
 
 <footer>
-  <p>&copy; 2026 Chamber of Commerce</p>
+  <p>&copy; 2026 Jinja Chamber of Commerce</p>
 </footer>
 
 </body>
