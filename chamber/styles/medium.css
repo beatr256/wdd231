@@ -1,28 +1,3 @@
-@media (min-width: 800px) {
-
-    /* Grid layout for desktop: 3 columns */
-    #members-container.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Hover effect only for desktop */
-    #members-container.grid .member:hover {
-        transform: scale(1.03);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-}
-
-/* =========================
-   JOIN PAGE – LARGE SCREENS
-========================= */
-
-@media (min-width: 800px) {
-    .join-layout {
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-    }
-}
-
 /* ===============================
    DISCOVER PAGE – MEDIUM VIEW
    641px–1024px

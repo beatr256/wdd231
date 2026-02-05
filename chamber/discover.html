@@ -1,129 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discover | Chamber of Commerce</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Existing chamber CSS -->
-  <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/medium.css" />
+  <title>Discover Jinja | Chamber of Commerce</title>
 
-  <style>
-    /* ===== DISCOVER PAGE GRID ===== */
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
+  <!-- Meta Information -->
+  <meta name="description" content="Discover Jinja’s attractions, culture, and business-friendly locations that support tourism and economic development.">
+  <meta name="author" content="Hellen Beatrice Apolot">
 
-    .visit-message {
-      background-color: #eef2ff;
-      border-left: 6px solid #1f3c88;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      font-weight: 600;
-    }
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
 
-    .discover-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-areas:
-        "card1"
-        "card2"
-        "card3"
-        "card4"
-        "card5"
-        "card6"
-        "card7"
-        "card8";
-    }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Discover Jinja | Chamber of Commerce">
+  <meta property="og:description" content="Explore Jinja’s landmarks, culture, and community features that attract visitors and support local businesses.">
+  <meta property="og:image" content="https://yourusername.github.io/chamber/images/og-discover.webp">
+  <meta property="og:url" content="https://yourusername.github.io/chamber/discover.html">
 
-    .discover-card {
-      background: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-    }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    .discover-card figure {
-      margin: 0;
-    }
-
-    .discover-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .discover-card-content {
-      padding: 1rem;
-    }
-
-    .discover-card h2 {
-      margin-top: 0;
-      color: #1f3c88;
-    }
-
-    .discover-card address {
-      font-style: normal;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-      color: #555;
-    }
-
-    .discover-card button {
-      margin-top: auto;
-      background-color: #f4a261;
-      border: none;
-      padding: 0.75rem;
-      font-size: 1rem;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    /* ===== IMAGE HOVER EFFECT (NOT MOBILE) ===== */
-    @media (min-width: 641px) {
-      .discover-card img:hover {
-        filter: brightness(85%);
-        transform: scale(1.03);
-        transition: all 0.3s ease;
-      }
-    }
-
-    /* ===== MEDIUM VIEW ===== */
-    @media (min-width: 641px) and (max-width: 1024px) {
-      .discover-grid {
-        grid-template-areas:
-          "card1 card2"
-          "card3 card4"
-          "card5 card6"
-          "card7 card8";
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    /* ===== LARGE VIEW ===== */
-    @media (min-width: 1025px) {
-      .discover-grid {
-        grid-template-areas:
-          "card1 card2 card3"
-          "card4 card5 card6"
-          "card7 card8 card8";
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <link rel="stylesheet" href="styles/discover.css">
 </head>
 <body>
 
-  <!-- ===== HEADER & NAV (PRESERVED) ===== -->
+  <!-- Header -->
   <header>
-    <h1>Chamber of Commerce</h1>
+    <img src="images/logo.webp" alt="Chamber of Commerce Logo">
   </header>
 
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -133,64 +46,22 @@
     </ul>
   </nav>
 
-  <!-- ===== MAIN CONTENT ===== -->
+  <!-- Main Content -->
   <main>
-    <div id="visitMessage" class="visit-message"></div>
+    <h1>Discover Jinja</h1>
+
+    <section id="visitMessage" class="visit-message"></section>
 
     <section class="discover-grid" id="discoverGrid"></section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Chamber of Commerce</p>
+    <p>&copy; 2026 Jinja Chamber of Commerce</p>
   </footer>
 
-  <!-- ===== JAVASCRIPT MODULE ===== -->
-  <script type="module">
-    import { places } from "./data/places.mjs";
-
-    const grid = document.getElementById("discoverGrid");
-
-    places.forEach((place, index) => {
-      const card = document.createElement("section");
-      card.classList.add("discover-card");
-      card.style.gridArea = `card${index + 1}`;
-
-      card.innerHTML = `
-        <figure>
-          <img src="${place.image}" alt="${place.name}" loading="lazy">
-        </figure>
-        <div class="discover-card-content">
-          <h2>${place.name}</h2>
-          <address>${place.address}</address>
-          <p>${place.description}</p>
-          <button>Learn More</button>
-        </div>
-      `;
-
-      grid.appendChild(card);
-    });
-
-    /* ===== LAST VISIT MESSAGE ===== */
-    const message = document.getElementById("visitMessage");
-    const lastVisit = localStorage.getItem("lastVisit");
-    const now = Date.now();
-
-    if (!lastVisit) {
-      message.textContent = "Welcome! Let us know if you have any questions.";
-    } else {
-      const days = Math.floor((now - lastVisit) / 86400000);
-      if (days < 1) {
-        message.textContent = "Back so soon! Awesome!";
-      } else if (days === 1) {
-        message.textContent = "You last visited 1 day ago.";
-      } else {
-        message.textContent = `You last visited ${days} days ago.`;
-      }
-    }
-
-    localStorage.setItem("lastVisit", now);
-  </script>
+  <!-- JavaScript -->
+  <script src="scripts/discover.js" type="module"></script>
 
 </body>
 </html>
