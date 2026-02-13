@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header><h1>Form Submission Data</h1></header>
+    <main>
+        <div id="submitted-data"></div>
+    </main>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const submittedData = document.getElementById('submitted-data');
+        submittedData.innerHTML = `
+            <p>Name: ${urlParams.get('name')}</p>
+            <p>Email: ${urlParams.get('email')}</p>
+            <p>Message: ${urlParams.get('message')}</p>
+        `;
+    </script>
+</body>
+</html>
