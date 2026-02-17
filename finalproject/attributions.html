@@ -1,87 +1,65 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Local Skateboarding Club | Attributions</title>
+    <meta name="description" content="Credits and sources for images, fonts, and resources used in the Local Skateboarding Club website project.">
+    <meta name="author" content="Hellen Beatrice Apolot">
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <title>Local Skateboarding Club | Attributions</title>
+    <meta property="og:title" content="Local Skateboarding Club Attributions">
+    <meta property="og:description" content="View the credits and resource acknowledgements for this project.">
+    <meta property="og:image" content="https://beatr256.github.io/wdd231/finalproject/images/skatepark.jpg">
+    <meta property="og:url" content="https://beatr256.github.io/wdd231/finalproject/attributions.html">
 
-  <meta name="description" content="Credits and sources for images, fonts, and resources used in the Local Skateboarding Club website project.">
-  <meta name="author" content="Your Full Name">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 
-  <meta property="og:title" content="Local Skateboarding Club Attributions">
-  <meta property="og:description" content="View the credits and resource acknowledgements for this project.">
-  <meta property="og:image" content="https://beatr256.github.io/wdd231/finalproject/images/skatepark.jpg">
-  <meta property="og:url" content="https://beatr256.github.io/wdd231/finalproject/attributions.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="favicon.ico">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles/styles.css">
-
-  <script type="module" src="scripts/storage.js"></script>
+    <script type="module" src="scripts/storage.js" defer></script>
+    <script type="module" src="scripts/main.js" defer></script>
 </head>
-
 <body>
+    <header>
+        <div class="logo"><img src="images/logo.png" alt="Local Skateboarding Club Logo"></div>
+        <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="attributions.html" class="active">Attributions</a></li>
+                <li><a href="https://youtube.com/YOURVIDEO" target="_blank">Project Video</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-  <h1>Local Skateboarding Club</h1>
-  <button id="hamburger">☰</button>
-  <nav>
-    <ul id="nav-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="join.html">Join</a></li>
-      <li><a href="attributions.html">Attributions</a></li>
-    </ul>
-  </nav>
-</header>
+    <main>
+        <h1>Local Skateboarding Club</h1>
+        <section>
+            <h2>Credits and Attributions</h2>
+            <p>Below are the sources for images, fonts, and resources used in this website project:</p>
+            <ul>
+                <li>Skate park images from <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                <li>Skater action photos from <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                <li>Google Fonts: <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Roboto</a></li>
+                <li>Icons and logos: Created by Hellen Beatrice Apolot</li>
+            </ul>
 
-<main>
-  <h2>Attributions</h2>
+            <h3>Featured Image</h3>
+            <img src="images/skatepark.jpg" alt="Skateboarders at a local skate park" width="600">
+        </section>
+    </main>
 
-  <section>
-    <h3>Images</h3>
-    <ul>
-      <li>Skate park images from Unsplash.com</li>
-      <li>Skater action photos from Unsplash.com</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Fonts</h3>
-    <ul>
-      <li>Roboto font from Google Fonts</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Course Resources</h3>
-    <ul>
-      <li>JavaScript and ES Modules examples adapted from course materials</li>
-    </ul>
-  </section>
-
-  <p>All other content was created by Your Full Name.</p>
-</main>
-
-<footer>
-  <p>&copy; 2026 Local Skateboarding Club</p>
-  <a href="https://youtube.com/YOURVIDEO">Project Video</a>
-</footer>
-
-<script>
-  const hamburger = document.querySelector("#hamburger");
-  const navMenu = document.querySelector("#nav-menu");
-
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-</script>
-
+    <footer>
+        <p>&copy; 2026 Local Skateboarding Club | <a href="attributions.html">Attributions</a></p>
+        <p><a href="https://youtube.com/YOURVIDEO" target="_blank">Project Video Demo</a></p>
+    </footer>
 </body>
 </html>
-
