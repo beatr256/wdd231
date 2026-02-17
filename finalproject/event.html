@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Local Skateboarding Club | Events</title>
+<meta name="description" content="View upcoming skateboarding events, competitions, and meetups.">
+<meta name="author" content="Your Name">
+
+<meta property="og:title" content="Skateboarding Club Events">
+<meta property="og:description" content="Upcoming skateboarding competitions and sessions.">
+<meta property="og:image" content="images/skate-event.jpg">
+
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="styles/styles.css">
+<script type="module" src="scripts/storage.js"></script>
+</head>
+
+<body>
+<header>
+  <h1>Local Skateboarding Club</h1>
+  <button id="hamburger">☰</button>
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Upcoming Events</h2>
+
+    <article>
+      <h3>Community Skate Jam</h3>
+      <p>Date: March 15, 2026</p>
+      <p>Location: Downtown Skate Park</p>
+      <p>Description: Open skate session with prizes and music.</p>
+    </article>
+
+    <article>
+      <h3>Beginner Training Workshop</h3>
+      <p>Date: April 5, 2026</p>
+      <p>Location: Eastside Skate Plaza</p>
+      <p>Description: Learn fundamentals with experienced club members.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Local Skateboarding Club</p>
+  <a href="attributions.html">Attributions</a>
+  <a href="https://youtube.com/YOURVIDEO">Project Video</a>
+</footer>
+
+<script>
+const hamburger = document.querySelector("#hamburger");
+const navMenu = document.querySelector("#nav-menu ul");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+</script>
+
+</body>
+</html>

@@ -1,48 +1,41 @@
-import { items } from './data.js';
+import { getSkaters } from "./fetchData.js";
 
-// Hamburger toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('show'));
+const container = document.querySelector(".card-container");
+const modal = document.querySelector("#modal");
+const modalDetails = document.querySelector("#modal-details");
+const closeModal = document.querySelector("#close-modal");
 
-// Display items dynamically
-function displayItems(items) {
-    const container = document.getElementById('item-container');
-    container.innerHTML = '';
-    items.forEach(item => {
-        container.innerHTML += `
-        <div class="item">
-            <h3>${item.name}</h3>
-            <p>Category: ${item.category}</p>
-            <p>Price: $${item.price}</p>
-            <p>${item.description}</p>
-        </div>`;
+async function displaySkaters() {
+  const skaters = await getSkaters();
+
+  skaters.forEach(skater => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    card.innerHTML = `
+      <h3>${skater.name}</h3>
+      <p>Level: ${skater.level}</p>
+      <p>Favorite Trick: ${skater.favoriteTrick}</p>
+      <p>Years Skating: ${skater.yearsSkating}</p>
+      <button class="details-btn">More Info</button>
+    `;
+
+    card.querySelector(".details-btn").addEventListener("click", () => {
+      modalDetails.innerHTML = `
+        <h3>${skater.name}</h3>
+        <p>Experience Level: ${skater.level}</p>
+        <p>Favorite Trick: ${skater.favoriteTrick}</p>
+        <p>Years Skating: ${skater.yearsSkating}</p>
+      `;
+      modal.classList.remove("hidden");
     });
-}
-displayItems(items);
 
-// Modal functionality
-const modal = document.getElementById('modal');
-const closeModal = document.getElementById('closeModal');
-document.querySelectorAll('.item').forEach(item => {
-    item.addEventListener('click', () => modal.style.display = 'flex');
+    container.appendChild(card);
+  });
+}
+
+displaySkaters();
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
 });
-closeModal.addEventListener('click', () => modal.style.display = 'none');
-
-// Local Storage example
-if (!localStorage.getItem('visited')) {
-    localStorage.setItem('visited', 'true');
-    alert('Welcome to the site!');
-}
-
-// Example fetch (if using external API)
-async function fetchData() {
-    try {
-        const response = await fetch('data/data.json');
-        const data = await response.json();
-        displayItems(data);
-    } catch (error) {
-        console.error('Fetch error:', error);
-    }
-}
-// fetchData(); // Uncomment if you have API or JSON file

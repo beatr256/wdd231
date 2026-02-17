@@ -1,0 +1,17 @@
+[
+  { "name": "Alex", "level": "Beginner", "favoriteTrick": "Ollie", "yearsSkating": 1 },
+  { "name": "Jordan", "level": "Intermediate", "favoriteTrick": "Kickflip", "yearsSkating": 3 },
+  { "name": "Taylor", "level": "Advanced", "favoriteTrick": "Heelflip", "yearsSkating": 5 },
+  { "name": "Chris", "level": "Beginner", "favoriteTrick": "Shuvit", "yearsSkating": 2 },
+  { "name": "Morgan", "level": "Advanced", "favoriteTrick": "Tre Flip", "yearsSkating": 6 },
+  { "name": "Jamie", "level": "Intermediate", "favoriteTrick": "Manual", "yearsSkating": 4 },
+  { "name": "Casey", "level": "Beginner", "favoriteTrick": "Drop-in", "yearsSkating": 1 },
+  { "name": "Riley", "level": "Advanced", "favoriteTrick": "Hardflip", "yearsSkating": 7 },
+  { "name": "Skyler", "level": "Intermediate", "favoriteTrick": "Pop Shuvit", "yearsSkating": 3 },
+  { "name": "Avery", "level": "Beginner", "favoriteTrick": "Boardslide", "yearsSkating": 2 },
+  { "name": "Blake", "level": "Advanced", "favoriteTrick": "Nosegrind", "yearsSkating": 8 },
+  { "name": "Quinn", "level": "Intermediate", "favoriteTrick": "Bigspin", "yearsSkating": 4 },
+  { "name": "Dakota", "level": "Beginner", "favoriteTrick": "Boneless", "yearsSkating": 1 },
+  { "name": "Reese", "level": "Advanced", "favoriteTrick": "Laser Flip", "yearsSkating": 6 },
+  { "name": "Hayden", "level": "Intermediate", "favoriteTrick": "Frontside 180", "yearsSkating": 3 }
+]
