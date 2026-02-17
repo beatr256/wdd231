@@ -1,39 +1,86 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <title>Attributions</title>
-    <meta name="description" content="Credits and sources for images, icons, and other assets used in the Local Skateboarding Club project.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Local Skateboarding Club | Attributions</title>
+
+  <meta name="description" content="Credits and sources for images, fonts, and resources used in the Local Skateboarding Club website project.">
+  <meta name="author" content="Your Full Name">
+
+  <meta property="og:title" content="Local Skateboarding Club Attributions">
+  <meta property="og:description" content="View the credits and resource acknowledgements for this project.">
+  <meta property="og:image" content="https://beatr256.github.io/wdd231/finalproject/images/skatepark.jpg">
+  <meta property="og:url" content="https://beatr256.github.io/wdd231/finalproject/attributions.html">
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <script type="module" src="scripts/storage.js"></script>
 </head>
+
 <body>
 
-<h1>Attributions</h1>
+<header>
+  <h1>Local Skateboarding Club</h1>
+  <button id="hamburger">☰</button>
+  <nav>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="attributions.html">Attributions</a></li>
+    </ul>
+  </nav>
+</header>
 
-<h2>Images</h2>
-<ul>
-    <li>Skatepark photo by <strong>Photographer Name</strong> from <a href="https://unsplash.com">Unsplash</a></li>
-    <li>Skater action image by <strong>Photographer Name</strong> from <a href="https://unsplash.com">Unsplash</a></li>
+<main>
+  <h2>Attributions</h2>
 
-</ul>
+  <section>
+    <h3>Images</h3>
+    <ul>
+      <li>Skate park images from Unsplash.com</li>
+      <li>Skater action photos from Unsplash.com</li>
+    </ul>
+  </section>
 
-<h2>Icons</h2>
-<ul>
-    <li>Hamburger icon — from <a href="https://fontawesome.com">Font Awesome</a></li>
-    
-</ul>
+  <section>
+    <h3>Fonts</h3>
+    <ul>
+      <li>Roboto font from Google Fonts</li>
+    </ul>
+  </section>
 
-<h2>JavaScript / Libraries</h2>
-<ul>
-    <li>ES Module patterns and examples — adapted from course materials</li>
-    
-</ul>
+  <section>
+    <h3>Course Resources</h3>
+    <ul>
+      <li>JavaScript and ES Modules examples adapted from course materials</li>
+    </ul>
+  </section>
 
-<h2>Fonts</h2>
-<ul>
-    <li>Roboto font — from <a href="https://fonts.googleapis.com">Google Fonts</a></li>
-</ul>
+  <p>All other content was created by Your Full Name.</p>
+</main>
 
-<p>All other content was written and created by <strong>Your Full Name</strong>.</p>
+<footer>
+  <p>&copy; 2026 Local Skateboarding Club</p>
+  <a href="https://youtube.com/YOURVIDEO">Project Video</a>
+</footer>
+
+<script>
+  const hamburger = document.querySelector("#hamburger");
+  const navMenu = document.querySelector("#nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
