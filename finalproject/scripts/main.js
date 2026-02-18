@@ -1,4 +1,4 @@
-import { getSkaters } from "./fetchData.js";
+import { getSkaters } from "./main.js";
 
 const container = document.querySelector(".card-container");
 const modal = document.querySelector("#modal");
@@ -14,7 +14,7 @@ async function displaySkaters() {
 
     card.innerHTML = `
       <h3>${skater.name}</h3>
-      <p>Level: ${skater.level}</p>
+      <p>Level: ${skater.level}</p>s
       <p>Favorite Trick: ${skater.favoriteTrick}</p>
       <p>Years Skating: ${skater.yearsSkating}</p>
       <button class="details-btn">More Info</button>
