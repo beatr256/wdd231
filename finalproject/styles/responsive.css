@@ -2,7 +2,7 @@
 
   nav ul {
     flex-direction: column;
-    display: none;
+    display: none; /* hidden by default */
     background: #1f2933;
     position: absolute;
     top: 70px;
@@ -12,11 +12,10 @@
   }
 
   nav ul.show {
-    display: flex;
+    display: flex; /* show menu when toggled */
   }
 
   #hamburger {
-    display: block;
+    display: block; /* hamburger visible on small screens */
   }
-
 }
