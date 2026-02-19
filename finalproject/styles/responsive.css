@@ -1,52 +1,22 @@
-/* ===========================
-   Reset & Box Sizing
-=========================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@media (max-width: 768px) {
 
-/* ===========================
-   Typography & Colors
-=========================== */
-body {
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #1F2933; /* Dark gray text */
-}
+  nav ul {
+    flex-direction: column;
+    display: none;
+    background: #1f2933;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
 
-h1, h2, h3 {
-  color: #0F172A; /* Dark navy headings */
-  margin-bottom: 0.5rem;
-}
+  nav ul.show {
+    display: flex;
+  }
 
-p, li {
-  margin-bottom: 0.75rem;
-}
+  #hamburger {
+    display: block;
+  }
 
-/* ===========================
-   Header & Footer Basics
-=========================== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0F172A;
-  color: #E5E7EB;
-  padding: 0.75rem 1.5rem;
-}
-
-header .logo img {
-  height: 50px;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #0F172A;
-  color: #E5E7EB;
-  margin-top: 2rem;
-  font-size: 0.9rem;
 }

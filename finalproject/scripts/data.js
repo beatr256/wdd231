@@ -3,13 +3,12 @@ export async function getSkaters() {
     const response = await fetch("data/skaters.json");
 
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error("Failed to fetch skaters.");
     }
 
-    const data = await response.json();
-    return data;
-
+    return await response.json();
   } catch (error) {
-    console.error("Fetch error:", error);
+    console.error("Error:", error);
   }
 }
+

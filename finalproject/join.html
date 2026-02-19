@@ -1,74 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Local Skateboarding Club | Join</title>
-<meta name="description" content="Join the Local Skateboarding Club and become part of our community.">
-<meta name="author" content="Your Name">
+  <title>Local Skateboarding Club | Join</title>
 
-<meta property="og:title" content="Join Our Skateboarding Club">
-<meta property="og:description" content="Sign up to join our skateboarding community.">
-<meta property="og:image" content="images/skater.jpg">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 
-<link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="styles/styles.css">
+  <script type="module" src="scripts/main.js" defer></script>
 </head>
 
 <body>
+
 <header>
-  <h1>Local Skateboarding Club</h1>
-  <button id="hamburger">☰</button>
-  <nav id="nav-menu">
-    <ul>
+  <div class="logo">
+    <img src="images/logo.png" alt="Club Logo">
+  </div>
+
+  <nav>
+    <button id="hamburger">&#9776;</button>
+    <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="events.html">Events</a></li>
-      <li><a href="join.html">Join</a></li>
+      <li><a href="join.html" class="active">Join</a></li>
+      <li><a href="attributions.html">Attributions</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section>
-    <h2>Join the Club</h2>
+  <h1>Join the Club</h1>
 
-    <form action="form-action.html" method="get">
-      
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required>
+  <form method="get" action="#">
+    <label>
+      Full Name
+      <input type="text" name="fullname" required>
+    </label>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <label>
+      Email
+      <input type="email" name="email" required>
+    </label>
 
-      <label for="level">Skill Level</label>
-      <select id="level" name="level" required>
-        <option value="">Select One</option>
+    <label>
+      Skill Level
+      <select name="level">
         <option value="Beginner">Beginner</option>
         <option value="Intermediate">Intermediate</option>
         <option value="Advanced">Advanced</option>
       </select>
+    </label>
 
-      <button type="submit">Submit Application</button>
-
-    </form>
-  </section>
+    <button type="submit">Join Now</button>
+  </form>
 </main>
 
 <footer>
   <p>&copy; 2026 Local Skateboarding Club</p>
-  <a href="attributions.html">Attributions</a>
-  <a href="https://youtube.com/YOURVIDEO">Project Video</a>
 </footer>
-
-<script>
-const hamburger = document.querySelector("#hamburger");
-const navMenu = document.querySelector("#nav-menu ul");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
-</script>
 
 </body>
 </html>

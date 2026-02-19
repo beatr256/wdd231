@@ -1,41 +1,71 @@
-import { getSkaters } from "./main.js";
+import { getSkaters } from "./data.js";
 
-const container = document.querySelector(".card-container");
-const modal = document.querySelector("#modal");
-const modalDetails = document.querySelector("#modal-details");
-const closeModal = document.querySelector("#close-modal");
+/* ========== HAMBURGER MENU ========== */
+const hamburger = document.querySelector("#hamburger");
+const navLinks = document.querySelector("#nav-links");
 
-async function displaySkaters() {
-  const skaters = await getSkaters();
-
-  skaters.forEach(skater => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <h3>${skater.name}</h3>
-      <p>Level: ${skater.level}</p>s
-      <p>Favorite Trick: ${skater.favoriteTrick}</p>
-      <p>Years Skating: ${skater.yearsSkating}</p>
-      <button class="details-btn">More Info</button>
-    `;
-
-    card.querySelector(".details-btn").addEventListener("click", () => {
-      modalDetails.innerHTML = `
-        <h3>${skater.name}</h3>
-        <p>Experience Level: ${skater.level}</p>
-        <p>Favorite Trick: ${skater.favoriteTrick}</p>
-        <p>Years Skating: ${skater.yearsSkating}</p>
-      `;
-      modal.classList.remove("hidden");
-    });
-
-    container.appendChild(card);
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
   });
 }
 
-displaySkaters();
+/* ========== LOAD CARDS (HOME PAGE ONLY) ========== */
+const container = document.querySelector("#item-container");
 
-closeModal.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
+if (container) {
+  getSkaters().then(data => {
+
+    container.innerHTML = data.map(skater => `
+      <div class="card">
+        <h3>${skater.name}</h3>
+        <p><strong>Level:</strong> ${skater.level}</p>
+        <button class="view-btn"
+          data-name="${skater.name}"
+          data-level="${skater.level}"
+          data-trick="${skater.favoriteTrick}"
+          data-years="${skater.yearsSkating}">
+          View Details
+        </button>
+      </div>
+    `).join("");
+
+    setupModal();
+  });
+}
+
+/* ========== MODAL ========== */
+function setupModal() {
+  const modal = document.querySelector("#modal");
+  const modalDetails = document.querySelector("#modal-details");
+  const closeBtn = document.querySelector("#close-modal");
+
+  document.querySelectorAll(".view-btn").forEach(button => {
+    button.addEventListener("click", () => {
+
+      modalDetails.innerHTML = `
+        <h3>${button.dataset.name}</h3>
+        <p><strong>Skill Level:</strong> ${button.dataset.level}</p>
+        <p><strong>Favorite Trick:</strong> ${button.dataset.trick}</p>
+        <p><strong>Years Skating:</strong> ${button.dataset.years}</p>
+      `;
+
+      modal.classList.remove("hidden");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+}
+
+/* ========== LOCAL STORAGE VISIT COUNTER ========== */
+let visits = localStorage.getItem("visits") || 0;
+visits++;
+localStorage.setItem("visits", visits);
+
+const counter = document.querySelector("#visit-counter");
+if (counter) {
+  counter.textContent = `You have visited this page ${visits} time(s).`;
+}
+

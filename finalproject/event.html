@@ -1,69 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Local Skateboarding Club | Events</title>
-<meta name="description" content="View upcoming skateboarding events, competitions, and meetups.">
-<meta name="author" content="Your Name">
+  <title>Local Skateboarding Club | Events</title>
 
-<meta property="og:title" content="Skateboarding Club Events">
-<meta property="og:description" content="Upcoming skateboarding competitions and sessions.">
-<meta property="og:image" content="images/skate-event.jpg">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/responsive.css">
 
-<link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="styles/styles.css">
-<script type="module" src="scripts/storage.js"></script>
+  <script type="module" src="scripts/main.js" defer></script>
 </head>
 
 <body>
+
 <header>
-  <h1>Local Skateboarding Club</h1>
-  <button id="hamburger">☰</button>
-  <nav id="nav-menu">
-    <ul>
+  <div class="logo">
+    <img src="images/logo.png" alt="Club Logo">
+  </div>
+
+  <nav>
+    <button id="hamburger">&#9776;</button>
+    <ul id="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
       <li><a href="join.html">Join</a></li>
+      <li><a href="attributions.html">Attributions</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <section>
-    <h2>Upcoming Events</h2>
+  <h1>Upcoming Skate Events</h1>
 
+  <section>
     <article>
-      <h3>Community Skate Jam</h3>
+      <h2>City Skate Jam</h2>
       <p>Date: March 15, 2026</p>
       <p>Location: Downtown Skate Park</p>
-      <p>Description: Open skate session with prizes and music.</p>
     </article>
 
     <article>
-      <h3>Beginner Training Workshop</h3>
-      <p>Date: April 5, 2026</p>
-      <p>Location: Eastside Skate Plaza</p>
-      <p>Description: Learn fundamentals with experienced club members.</p>
+      <h2>Beginner Workshop</h2>
+      <p>Date: April 2, 2026</p>
+      <p>Location: Community Center</p>
     </article>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2026 Local Skateboarding Club</p>
-  <a href="attributions.html">Attributions</a>
-  <a href="https://youtube.com/YOURVIDEO">Project Video</a>
 </footer>
-
-<script>
-const hamburger = document.querySelector("#hamburger");
-const navMenu = document.querySelector("#nav-menu ul");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
-</script>
 
 </body>
 </html>
